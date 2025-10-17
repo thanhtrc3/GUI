@@ -224,5 +224,18 @@ namespace GUI
                 list = studentService.GetAll();
             BindGrid(list);
         }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg;*.jpeg;*.png";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    avatarFilePath = openFileDialog.FileName;
+                    picAvatar.Image = Image.FromFile(avatarFilePath);
+                }
+            }
+        }
     }
 }

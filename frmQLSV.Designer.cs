@@ -108,6 +108,7 @@
             this.btnUpload.TabIndex = 12;
             this.btnUpload.Text = "...";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // picAvatar
             // 
